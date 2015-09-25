@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CustomViewsDemo</string>
+    <string name="text">This is text in different font styles.</string>
+
+</resources>
