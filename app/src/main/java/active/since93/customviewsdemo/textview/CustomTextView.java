@@ -1,10 +1,12 @@
-package active.since93.customviewsdemo;
+package active.since93.customviewsdemo.textview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
+
+import active.since93.customviewsdemo.R;
 
 /**
  * Created by Darshan on 25-Sep-15.

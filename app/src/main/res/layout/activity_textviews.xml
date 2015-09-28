@@ -16,7 +16,7 @@
         android:text="@string/text"
         android:textSize="@dimen/text_size" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -25,7 +25,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="Anxiety.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -34,7 +34,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="Almost_Japanese_Smooth.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -43,7 +43,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="androidnation.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -52,7 +52,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="BillionStars_PersonalUse.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -61,7 +61,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="DJB_Linus_Pumpkin.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -70,7 +70,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="DK_Face_Your_Fears.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
@@ -79,7 +79,7 @@
         android:textSize="@dimen/text_size"
         customtextview:typeface="Roboto-Light.ttf" />
 
-    <active.since93.customviewsdemo.CustomTextView
+    <active.since93.customviewsdemo.textview.CustomTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/text_padding"
