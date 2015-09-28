@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <attr name="typeface" format="string"/>
+    <attr name="typeface" format="string" />
     <declare-styleable name="CustomTextView">
         <attr name="typeface" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomButton">
+        <attr name="text" format="string" />
+        <attr name="text_color" format="color" />
+        <attr name="text_size" format="dimension" />
     </declare-styleable>
 
 </resources>

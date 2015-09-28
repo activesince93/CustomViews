@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnTextViews;
+    private Button btnTextViews, btnButtons;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,17 +16,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btnTextViews = (Button) findViewById(R.id.btn_text_views);
+        btnButtons = (Button) findViewById(R.id.btn_buttons);
         btnTextViews.setOnClickListener(this);
+        btnButtons.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
+        Intent intent = null;
         switch (id) {
             case R.id.btn_text_views:
-                Intent intent = new Intent(MainActivity.this, TextViewsActivity.class);
+                intent = new Intent(MainActivity.this, TextViewsActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.btn_buttons:
+                intent = new Intent(MainActivity.this, ButtonActivity.class);
+                startActivity(intent);
             default:
                 break;
         }
