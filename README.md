@@ -1,7 +1,7 @@
 # CustomViews
 This repository contains different types of CustomViews we can create in Android Application Development.
 
-Check out the APK [here](https://appetize.io/app/8h1831hkgbn2yzg864gwy23ffw)
+- Check out the APK [here](https://appetize.io/app/8h1831hkgbn2yzg864gwy23ffw)
 
 ### Button
 
