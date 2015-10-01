@@ -18,6 +18,7 @@
 
         <activity
             android:name=".TextViewsActivity"
+            android:label="@string/title_text_views"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -26,6 +27,16 @@
 
         <activity
             android:name=".ButtonActivity"
+            android:label="@string/title_buttons"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".ImageViewsActivity"
+            android:label="@string/title_imageview"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

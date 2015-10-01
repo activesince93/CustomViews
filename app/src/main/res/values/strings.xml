@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">CustomViewsDemo</string>
+    <string name="title_buttons">Buttons</string>
+    <string name="title_imageview">ImageView</string>
+    <string name="title_text_views">TextViews</string>
     <string name="text">This is text in different font styles.</string>
 
 </resources>

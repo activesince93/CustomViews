@@ -7,13 +7,14 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/simpleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:text="Simple Button" />
 
     <active.since93.customviewsdemo.button.ButtonRectangle
-        android:id="@+id/button"
+        android:id="@+id/customRippleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -21,10 +22,11 @@
         android:text="Button" />
 
     <active.since93.customviewsdemo.button.CustomButton
+        android:id="@+id/customButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         custombutton:text="Custom Button"
         custombutton:text_color="@color/colorPrimary"
-        custombutton:text_size="10dp"/>
+        custombutton:text_size="10dp" />
 
 </LinearLayout>

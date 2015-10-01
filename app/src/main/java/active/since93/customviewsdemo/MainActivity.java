@@ -3,12 +3,14 @@ package active.since93.customviewsdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnTextViews, btnButtons;
+    private Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,8 +19,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btnTextViews = (Button) findViewById(R.id.btn_text_views);
         btnButtons = (Button) findViewById(R.id.btn_buttons);
+        btnSnackBar = (Button) findViewById(R.id.snackbar);
+        btnImageViews = (Button) findViewById(R.id.btn_imageviews);
+        btnSnackBarWithButton = (Button) findViewById(R.id.snackbar_button);
         btnTextViews.setOnClickListener(this);
         btnButtons.setOnClickListener(this);
+        btnSnackBar.setOnClickListener(this);
+        btnSnackBarWithButton.setOnClickListener(this);
+        btnImageViews.setOnClickListener(this);
     }
 
     @Override
@@ -32,6 +40,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_buttons:
                 intent = new Intent(MainActivity.this, ButtonActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.snackbar:
+                Snackbar.make(v, "SnackBar without button.", Snackbar.LENGTH_LONG).show();
+                break;
+            case R.id.snackbar_button:
+                Snackbar.make(v, "SnackBar with button.", Snackbar.LENGTH_LONG).setAction("Button", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Toast.makeText(MainActivity.this, "Button clicked!", Toast.LENGTH_LONG).show();
+                    }
+                }).show();
+                break;
+            case R.id.btn_imageviews:
+                intent = new Intent(MainActivity.this, ImageViewsActivity.class);
                 startActivity(intent);
             default:
                 break;
