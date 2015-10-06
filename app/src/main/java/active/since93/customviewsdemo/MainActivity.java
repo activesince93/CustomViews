@@ -14,13 +14,13 @@ import com.google.android.gms.analytics.Tracker;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews;
     AnalyticsTrackers analyticsTrackers;
     Tracker t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews;
         setContentView(R.layout.activity_main);
         analyticsTrackers = new AnalyticsTrackers(this);
         try {

@@ -51,8 +51,6 @@ public class AnalyticsTrackers extends Application {
         return sInstance;
     }
 
-
-
     /**
      * Don't instantiate directly - use {@link #getInstance()} instead.
      */
