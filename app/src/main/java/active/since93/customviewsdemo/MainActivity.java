@@ -2,20 +2,33 @@ package active.since93.customviewsdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews;
+    AnalyticsTrackers analyticsTrackers;
+    Tracker t;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        analyticsTrackers = new AnalyticsTrackers(this);
+        try {
+            t = ((AnalyticsTrackers) getApplication()).get(AnalyticsTrackers.Target.APP_TRACKER, this);
+            t.send(new HitBuilders.AppViewBuilder().build());
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
 
         btnTextViews = (Button) findViewById(R.id.btn_text_views);
         btnButtons = (Button) findViewById(R.id.btn_buttons);
@@ -27,6 +40,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSnackBar.setOnClickListener(this);
         btnSnackBarWithButton.setOnClickListener(this);
         btnImageViews.setOnClickListener(this);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
     }
 
     @Override
