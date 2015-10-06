@@ -5,9 +5,27 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <active.since93.customviewsdemo.imageview.CircleImageView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Simple ImageView"
+        android:textSize="20dp" />
+
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/lauren"/>
+        android:src="@drawable/lauren" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Custom ImageView"
+        android:textSize="20dp" />
+
+    <active.since93.librery.imageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/lauren" />
 
 </LinearLayout>

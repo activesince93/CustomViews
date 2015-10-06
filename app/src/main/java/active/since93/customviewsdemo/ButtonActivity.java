@@ -3,11 +3,12 @@ package active.since93.customviewsdemo;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import active.since93.customviewsdemo.button.ButtonRectangle;
-import active.since93.customviewsdemo.button.CustomButton;
+import active.since93.librery.button.ButtonRectangle;
+import active.since93.librery.button.CustomButton;
 
 /**
  * Created by darshan.parikh on 28-Sep-15.
@@ -47,5 +48,16 @@ public class ButtonActivity extends AppCompatActivity implements View.OnClickLis
                 break;
 
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch(id) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

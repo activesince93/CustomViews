@@ -1,4 +1,4 @@
-package active.since93.customviewsdemo.imageview;
+package active.since93.librery.imageview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -21,7 +21,7 @@ import android.support.annotation.DrawableRes;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import active.since93.customviewsdemo.R;
+import active.since93.librery.R;
 
 /**
  * Created by darshan.parikh on 01-Oct-15.

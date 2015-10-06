@@ -1,20 +1,20 @@
-package active.since93.customviewsdemo.views;
+package active.since93.librery.button;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.Bitmap.Config;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
-import active.since93.customviewsdemo.R;
-import active.since93.customviewsdemo.utils.Utils;
+import active.since93.librery.R;
+
 
 /**
  * Created by darshan.parikh on 28-Sep-15.

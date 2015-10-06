@@ -13,7 +13,7 @@
         android:layout_margin="10dp"
         android:text="Simple Button" />
 
-    <active.since93.customviewsdemo.button.ButtonRectangle
+    <active.since93.librery.button.ButtonRectangle
         android:id="@+id/customRippleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +21,7 @@
         android:background="#1E88E5"
         android:text="Button" />
 
-    <active.since93.customviewsdemo.button.CustomButton
+    <active.since93.librery.button.CustomButton
         android:id="@+id/customButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

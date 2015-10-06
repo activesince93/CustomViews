@@ -1,4 +1,4 @@
-package active.since93.customviewsdemo.button;
+package active.since93.librery.button;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.util.AttributeSet;
 import android.widget.Button;
 
-import active.since93.customviewsdemo.R;
+import active.since93.librery.R;
 
 
 /**

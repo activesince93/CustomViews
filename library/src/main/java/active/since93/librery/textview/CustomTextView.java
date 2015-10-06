@@ -1,4 +1,4 @@
-package active.since93.customviewsdemo.textview;
+package active.since93.librery.textview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import active.since93.customviewsdemo.R;
+import active.since93.librery.R;
 
 /**
  * Created by Darshan on 25-Sep-15.

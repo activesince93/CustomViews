@@ -1,4 +1,4 @@
-package active.since93.customviewsdemo.button;
+package active.since93.librery.button;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,9 +10,7 @@ import android.util.AttributeSet;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import active.since93.customviewsdemo.R;
-import active.since93.customviewsdemo.utils.Utils;
-import active.since93.customviewsdemo.views.Button;
+import active.since93.librery.R;
 
 /**
  * Created by darshan.parikh on 28-Sep-15.
@@ -90,7 +88,7 @@ public class ButtonRectangle extends Button {
             textButton.setText(text);
             textButton.setTextColor(Color.WHITE);
             textButton.setTypeface(null, Typeface.BOLD);
-            LayoutParams params = new LayoutParams(LayoutParams.WRAP_CONTENT,LayoutParams.WRAP_CONTENT);
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
             params.addRule(RelativeLayout.CENTER_IN_PARENT, RelativeLayout.TRUE);
             params.setMargins(Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()), Utils.dpToPx(5, getResources()));
             textButton.setLayoutParams(params);
@@ -144,8 +142,8 @@ public class ButtonRectangle extends Button {
 //		centrarTexto();
         super.onDraw(canvas);
         if (x != -1) {
-            Rect src = new Rect(0, 0, getWidth()-Utils.dpToPx(6, getResources()), getHeight()-Utils.dpToPx(7, getResources()));
-            Rect dst = new Rect(Utils.dpToPx(6, getResources()), Utils.dpToPx(6, getResources()), getWidth()-Utils.dpToPx(6, getResources()), getHeight()-Utils.dpToPx(7, getResources()));
+            Rect src = new Rect(0, 0, getWidth()- Utils.dpToPx(6, getResources()), getHeight()- Utils.dpToPx(7, getResources()));
+            Rect dst = new Rect(Utils.dpToPx(6, getResources()), Utils.dpToPx(6, getResources()), getWidth()- Utils.dpToPx(6, getResources()), getHeight()- Utils.dpToPx(7, getResources()));
             canvas.drawBitmap(makeCircle(), src, dst, null);
             invalidate();
         }
