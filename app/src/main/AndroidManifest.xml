@@ -47,6 +47,7 @@
         <activity
             android:name=".EditTextsActivity"
             android:label="@string/title_edit_texts"
+            android:windowSoftInputMode="stateHidden"
             android:parentActivityName=".MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

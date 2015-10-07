@@ -6,31 +6,66 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="This is simple EditText." />
+        android:layout_height="wrap_content">
 
-    <active.since93.librery.edittext.CustomEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="This is custom EditText."
-        customedittext:typeface="DJB_Linus_Pumpkin.ttf" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <active.since93.librery.edittext.CustomEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="This is custom EditText."
-        customedittext:typeface="androidnation.ttf" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="This is simple EditText." />
 
-    <active.since93.librery.edittext.CustomEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:text="This is custom EditText."
-        customedittext:typeface="DK_Sensory_Overload.ttf" />
+            <active.since93.librery.edittext.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="This is custom EditText."
+                customedittext:typeface="DJB_Linus_Pumpkin.ttf" />
+
+            <active.since93.librery.edittext.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="This is custom EditText."
+                customedittext:typeface="androidnation.ttf" />
+
+            <active.since93.librery.edittext.CustomEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="This is custom EditText."
+                customedittext:typeface="DK_Sensory_Overload.ttf" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutEdtTxt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/extTxtEnter1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="This is floating EditText" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/layoutEdtTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/extTxtEnter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="This is floating EditText with error" />
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
