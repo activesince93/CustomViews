@@ -1,9 +1,11 @@
 package active.since93.customviewsdemo;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnEditTexts;
+        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnEditTexts, btnAlertWithButton, btnAlertWOButton;
         setContentView(R.layout.activity_main);
         analyticsTrackers = new AnalyticsTrackers(this);
         try {
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSnackBar = (Button) findViewById(R.id.snackbar);
         btnImageViews = (Button) findViewById(R.id.btn_imageviews);
         btnEditTexts = (Button) findViewById(R.id.btn_edit_text);
+        btnAlertWithButton = (Button) findViewById(R.id.btnAlertWithButton);
+        btnAlertWOButton = (Button) findViewById(R.id.btnAlertWOButton);
         btnSnackBarWithButton = (Button) findViewById(R.id.snackbar_button);
         btnTextViews.setOnClickListener(this);
         btnButtons.setOnClickListener(this);
@@ -46,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSnackBarWithButton.setOnClickListener(this);
         btnImageViews.setOnClickListener(this);
         btnEditTexts.setOnClickListener(this);
+        btnAlertWithButton.setOnClickListener(this);
+        btnAlertWOButton.setOnClickListener(this);
     }
 
     @Override
@@ -91,6 +97,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_edit_text:
                 intent = new Intent(MainActivity.this, EditTextsActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btnAlertWithButton:
+                showAlertWithButton(v);
+                break;
+            case R.id.btnAlertWOButton:
+                showAlertWOButton();
+                break;
             default:
                 break;
         }
@@ -113,5 +126,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    void showAlertWOButton() {
+        AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+        adb.setTitle(getString(R.string.app_name))
+                .setMessage("This is message.")
+                .show();
+    }
+
+    void showAlertWithButton(final View v) {
+        AlertDialog.Builder adb = new AlertDialog.Builder(MainActivity.this);
+        adb.setTitle(getString(R.string.app_name))
+                .setMessage("This is message.")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Snackbar.make(v, "OK clicked!", Snackbar.LENGTH_LONG).show();
+                    }
+                })
+                .setNegativeButton("CANCEL", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Snackbar.make(v, "CANCEL clicked!", Snackbar.LENGTH_LONG).show();
+                    }
+                })
+                .show();
     }
 }

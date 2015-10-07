@@ -41,11 +41,31 @@
         android:id="@+id/btn_imageviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="IMAGEVIEWS"/>
+        android:text="IMAGEVIEWS" />
 
     <Button
         android:id="@+id/btn_edit_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="EDITTEXTS"/>
+        android:text="EDITTEXTS" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnAlertWOButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="ALERT W/O BUTTON" />
+
+        <Button
+            android:id="@+id/btnAlertWithButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:singleLine="true"
+            android:text="ALERT WITH BUTTON" />
+    </LinearLayout>
 </LinearLayout>
