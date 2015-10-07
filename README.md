@@ -4,10 +4,17 @@ I have also implemented Google Analytics.
 
 - Check out the APK [here](https://appetize.io/app/8h1831hkgbn2yzg864gwy23ffw)
 
-### Button
-
-![Button](https://github.com/activesince93/CustomViews/blob/master/app/images/button.png)
+### Home Page
+![Main](https://github.com/activesince93/CustomViews/blob/master/screenshots/main.png)
 
 ### TextView
+![TextView](https://github.com/activesince93/CustomViews/blob/master/screenshots/textview.png)
 
-![TextView](https://github.com/activesince93/CustomViews/blob/master/app/images/textview.png)
+### Button
+![Button](https://github.com/activesince93/CustomViews/blob/master/screenshots/button.png)
+
+### ImageView
+![ImageView](https://github.com/activesince93/CustomViews/blob/master/screenshots/imageview.png)
+
+### EditText
+![EditText](https://github.com/activesince93/CustomViews/blob/master/screenshots/edittext.png)
