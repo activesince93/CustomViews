@@ -1,9 +1,13 @@
 package active.since93.customviewsdemo;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -20,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews;
+        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnEditTexts;
         setContentView(R.layout.activity_main);
         analyticsTrackers = new AnalyticsTrackers(this);
         try {
@@ -34,12 +38,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnButtons = (Button) findViewById(R.id.btn_buttons);
         btnSnackBar = (Button) findViewById(R.id.snackbar);
         btnImageViews = (Button) findViewById(R.id.btn_imageviews);
+        btnEditTexts = (Button) findViewById(R.id.btn_edit_text);
         btnSnackBarWithButton = (Button) findViewById(R.id.snackbar_button);
         btnTextViews.setOnClickListener(this);
         btnButtons.setOnClickListener(this);
         btnSnackBar.setOnClickListener(this);
         btnSnackBarWithButton.setOnClickListener(this);
         btnImageViews.setOnClickListener(this);
+        btnEditTexts.setOnClickListener(this);
     }
 
     @Override
@@ -81,8 +87,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_imageviews:
                 intent = new Intent(MainActivity.this, ImageViewsActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_edit_text:
+                intent = new Intent(MainActivity.this, EditTextsActivity.class);
+                startActivity(intent);
             default:
                 break;
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent intent = null;
+        switch(id) {
+            case R.id.action_github:
+                intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/activesince93/CustomViews"));
+                startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

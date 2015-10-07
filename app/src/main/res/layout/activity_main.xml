@@ -41,5 +41,11 @@
         android:id="@+id/btn_imageviews"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="IMAGEVIEW"/>
+        android:text="IMAGEVIEWS"/>
+
+    <Button
+        android:id="@+id/btn_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EDITTEXTS"/>
 </LinearLayout>
