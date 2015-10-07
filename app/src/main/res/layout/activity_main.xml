@@ -5,67 +5,78 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_text_views"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TEXTVIEWS" />
-
-    <Button
-        android:id="@+id/btn_buttons"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="BUTTONS" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/snackbar"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="SNACKBAR" />
-
-        <Button
-            android:id="@+id/snackbar_button"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="SNACKBAR BUTTON" />
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_imageviews"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="IMAGEVIEWS" />
-
-    <Button
-        android:id="@+id/btn_edit_text"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="EDITTEXTS" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btnAlertWOButton"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:text="ALERT W/O BUTTON" />
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnAlertWithButton"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:singleLine="true"
-            android:text="ALERT WITH BUTTON" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_text_views"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TEXTVIEWS" />
+
+            <Button
+                android:id="@+id/btn_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BUTTONS" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/snackbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="SNACKBAR" />
+
+                <Button
+                    android:id="@+id/snackbar_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="SNACKBAR BUTTON" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_imageviews"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IMAGEVIEWS" />
+
+            <Button
+                android:id="@+id/btn_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EDITTEXTS" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnAlertWOButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="ALERT W/O BUTTON" />
+
+                <Button
+                    android:id="@+id/btnAlertWithButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:singleLine="true"
+                    android:text="ALERT WITH BUTTON" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
