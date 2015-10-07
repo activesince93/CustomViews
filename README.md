@@ -63,3 +63,8 @@ I have also implemented Google Analytics.
         customedittext:typeface="androidnation.ttf" />
 ```
 ![EditText](https://github.com/activesince93/CustomViews/blob/master/screenshots/edittext.png)
+
+**Add the following line to your build.gradle dependencies**
+```sh
+compile project(':library')
+```
