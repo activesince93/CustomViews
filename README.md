@@ -18,7 +18,7 @@ I have also implemented Google Analytics.
         android:textSize="@dimen/text_size"
         customtextview:typeface="Roboto-Light.ttf" />
 ```
-![TextView](https://github.com/activesince93/CustomViews/blob/master/screenshots/textview.mp4)
+![TextView](https://github.com/activesince93/CustomViews/blob/master/screenshots/textview.gif)
 
 ### Button
 **Custom Button**
