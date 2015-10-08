@@ -60,4 +60,10 @@ public class ButtonActivity extends AppCompatActivity implements View.OnClickLis
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.right_in, R.anim.right_out);
+    }
 }

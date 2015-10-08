@@ -74,10 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_text_views:
                 intent = new Intent(MainActivity.this, TextViewsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
                 break;
             case R.id.btn_buttons:
                 intent = new Intent(MainActivity.this, ButtonActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
                 break;
             case R.id.snackbar:
                 Snackbar.make(v, "SnackBar without button.", Snackbar.LENGTH_LONG).show();
@@ -93,10 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_imageviews:
                 intent = new Intent(MainActivity.this, ImageViewsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
                 break;
             case R.id.btn_edit_text:
                 intent = new Intent(MainActivity.this, EditTextsActivity.class);
                 startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
                 break;
             case R.id.btnAlertWithButton:
                 showAlertWithButton(v);
