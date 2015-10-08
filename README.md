@@ -4,10 +4,10 @@ I have also implemented Google Analytics.
 
 - Check out the APK [here](https://appetize.io/app/2fcng57f0ng55x7e1dahzgay7m)
 
-### Home Page
+### Home Page:
 ![Main](https://github.com/activesince93/CustomViews/blob/master/screenshots/main.png)
 
-### TextView
+### TextView:
 ```sh
 <active.since93.librery.textview.CustomTextView
         android:layout_width="wrap_content"
@@ -18,9 +18,22 @@ I have also implemented Google Analytics.
         android:textSize="@dimen/text_size"
         customtextview:typeface="Roboto-Light.ttf" />
 ```
+**Custom Scrolling TextView**
+```sh
+<active.since93.librery.textview.ScrollingTextView
+                android:id="@+id/scrollTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_padding"
+                android:singleLine="true"
+                android:text="@string/text_text"
+                android:textSize="@dimen/text_size"
+                customtextview:scrollType="ifLengthExceeds"
+                customtextview:typeface="Almost_Japanese_Smooth.ttf" />
+```
 ![TextView](https://github.com/activesince93/CustomViews/blob/master/screenshots/textview.gif)
 
-### Button
+### Button:
 **Custom Button**
 ```sh
 <active.since93.librery.button.CustomButton
@@ -44,7 +57,7 @@ I have also implemented Google Analytics.
 ```
 ![Button](https://github.com/activesince93/CustomViews/blob/master/screenshots/button.png)
 
-### ImageView
+### ImageView:
 ```sh
 <active.since93.librery.imageview.CircleImageView
         android:layout_width="100dp"
@@ -53,7 +66,7 @@ I have also implemented Google Analytics.
 ```
 ![ImageView](https://github.com/activesince93/CustomViews/blob/master/screenshots/imageview.png)
 
-### EditText
+### EditText:
 ```sh
 <active.since93.librery.edittext.CustomEditText
         android:layout_width="match_parent"
