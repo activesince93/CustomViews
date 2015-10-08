@@ -4,10 +4,14 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import active.since93.librery.textview.ScrollingTextView;
+
 /**
  * Created by Darshan on 26-Sep-15.
  */
 public class TextViewsActivity extends AppCompatActivity {
+
+    ScrollingTextView scrollTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

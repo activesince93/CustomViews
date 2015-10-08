@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -42,6 +42,17 @@
                 android:gravity="center"
                 android:text="@string/text"
                 android:textSize="@dimen/text_size"
+                customtextview:typeface="androidnation.ttf" />
+
+            <active.since93.librery.textview.ScrollingTextView
+                android:id="@+id/scrollTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_padding"
+                android:singleLine="true"
+                android:text="@string/text_text"
+                android:textSize="@dimen/text_size"
+                customtextview:scrollType="ifLengthExceeds"
                 customtextview:typeface="Almost_Japanese_Smooth.ttf" />
 
             <active.since93.librery.textview.CustomTextView
@@ -51,34 +62,7 @@
                 android:gravity="center"
                 android:text="@string/text"
                 android:textSize="@dimen/text_size"
-                customtextview:typeface="androidnation.ttf" />
-
-            <active.since93.librery.textview.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_padding"
-                android:gravity="center"
-                android:text="@string/text"
-                android:textSize="@dimen/text_size"
-                customtextview:typeface="BillionStars_PersonalUse.ttf" />
-
-            <active.since93.librery.textview.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_padding"
-                android:gravity="center"
-                android:text="@string/text"
-                android:textSize="@dimen/text_size"
                 customtextview:typeface="DJB_Linus_Pumpkin.ttf" />
-
-            <active.since93.librery.textview.CustomTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_padding"
-                android:gravity="center"
-                android:text="@string/text"
-                android:textSize="@dimen/text_size"
-                customtextview:typeface="DK_Face_Your_Fears.ttf" />
 
             <active.since93.librery.textview.CustomTextView
                 android:layout_width="wrap_content"

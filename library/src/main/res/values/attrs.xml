@@ -19,4 +19,12 @@
         <attr name="civ_fill_color" format="color" />
     </declare-styleable>
 
+    <declare-styleable name="ScrollingTextView">
+        <attr name="scrollType" format="string">
+            <enum name="always" value="0" />
+            <enum name="ifLengthExceeds" value="1" />
+        </attr>
+        <attr name="typeface" />
+    </declare-styleable>
+
 </resources>

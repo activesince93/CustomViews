@@ -6,5 +6,6 @@
     <string name="title_github">GitHub</string>
     <string name="title_edit_texts">EditTexts</string>
     <string name="text">This is text in different font styles.</string>
+    <string name="text_text">This is text in different font styles. This is text in different font styles.</string>
 
 </resources>
