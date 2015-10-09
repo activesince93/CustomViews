@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 chipview:background_color="@color/colorAccent"
-                chipview:cancelable="false"
+                chipview:show_image="false"
                 chipview:chip_text="text" />
 
             <active.since93.librery.chipview.ChipView
