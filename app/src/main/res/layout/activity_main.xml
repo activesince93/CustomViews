@@ -77,6 +77,12 @@
                     android:singleLine="true"
                     android:text="ALERT WITH BUTTON" />
             </LinearLayout>
+
+            <Button
+                android:id="@+id/btnChipView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHIPVIEW" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

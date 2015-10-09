@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnEditTexts, btnAlertWithButton, btnAlertWOButton;
+        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnEditTexts, btnAlertWithButton, btnAlertWOButton, btnChipView;
         setContentView(R.layout.activity_main);
         analyticsTrackers = new AnalyticsTrackers(this);
         try {
@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAlertWithButton = (Button) findViewById(R.id.btnAlertWithButton);
         btnAlertWOButton = (Button) findViewById(R.id.btnAlertWOButton);
         btnSnackBarWithButton = (Button) findViewById(R.id.snackbar_button);
+        btnChipView = (Button) findViewById(R.id.btnChipView);
         btnTextViews.setOnClickListener(this);
         btnButtons.setOnClickListener(this);
         btnSnackBar.setOnClickListener(this);
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEditTexts.setOnClickListener(this);
         btnAlertWithButton.setOnClickListener(this);
         btnAlertWOButton.setOnClickListener(this);
+        btnChipView.setOnClickListener(this);
     }
 
     @Override
@@ -108,6 +110,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnAlertWOButton:
                 showAlertWOButton();
                 break;
+            case R.id.btnChipView:
+                intent = new Intent(MainActivity.this, ChipViewActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
             default:
                 break;
         }

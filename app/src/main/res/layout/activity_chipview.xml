@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chipview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <EditText
+            android:id="@+id/edtTxtText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="text"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/checkBoxCancelable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="image" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:id="@+id/main_chip_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <active.since93.librery.chipview.ChipView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                chipview:background_color="@color/colorAccent"
+                chipview:cancelable="false"
+                chipview:chip_text="text" />
+
+            <active.since93.librery.chipview.ChipView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                chipview:background_color="@color/colorPrimary"
+                chipview:chip_text="text" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
