@@ -135,7 +135,6 @@ public abstract class Button extends CustomView {
 
     /**
      * Make a dark color to ripple effect
-     *
      * @return
      */
     protected int makePressColor() {

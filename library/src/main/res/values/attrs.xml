@@ -29,7 +29,7 @@
 
     <declare-styleable name="ChipView">
         <attr name="chip_text" format="string"/>
-        <attr name="cancelable" format="boolean"/>
+        <attr name="show_image" format="boolean"/>
         <attr name="background_color" format="color"/>
     </declare-styleable>
 

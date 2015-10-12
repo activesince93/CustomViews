@@ -46,7 +46,7 @@ public class ChipView extends LinearLayout {
         if(attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ChipView);
             chipText = a.getString(R.styleable.ChipView_chip_text);
-            isCancelable = a.getBoolean(R.styleable.ChipView_cancelable, true);
+            isCancelable = a.getBoolean(R.styleable.ChipView_show_image, true);
             chipColor = a.getColor(R.styleable.ChipView_background_color, getResources().getColor(android.R.color.holo_red_light));
             a.recycle();
         } else {
