@@ -77,6 +77,18 @@ I have also implemented Google Analytics.
 ```
 ![EditText](https://github.com/activesince93/CustomViews/blob/master/screenshots/edittext.png)
 
+### ChipView:
+```sh
+<active.since93.librery.chipview.ChipView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        chipview:background_color="@color/colorAccent"
+        chipview:show_image="false"
+        chipview:chip_text="text" />
+```
+![ChipView](https://github.com/activesince93/CustomViews/blob/master/screenshots/chipview.png)
+
 **Add the following line to your build.gradle dependencies**
 ```sh
 compile project(':library')
