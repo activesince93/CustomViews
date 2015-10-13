@@ -33,7 +33,6 @@ public class AnalyticsTrackers extends Application {
         if (sInstance != null) {
             throw new IllegalStateException("Extra call to initialize analytics trackers");
         }
-
         sInstance = new AnalyticsTrackers(context);
     }
 
@@ -67,7 +66,6 @@ public class AnalyticsTrackers extends Application {
             }
             mTrackers.put(target, tracker);
         }
-
         return mTrackers.get(target);
     }
 }

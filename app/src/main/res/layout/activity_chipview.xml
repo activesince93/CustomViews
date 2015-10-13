@@ -14,8 +14,8 @@
             android:id="@+id/edtTxtText"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="text"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:text="text" />
 
         <CheckBox
             android:id="@+id/checkBoxCancelable"
@@ -33,24 +33,24 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="10dp">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:id="@+id/main_chip_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_margin="10dp"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="10dp">
 
             <active.since93.librery.chipview.ChipView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 chipview:background_color="@color/colorAccent"
-                chipview:show_image="false"
-                chipview:chip_text="text" />
+                chipview:chip_text="text"
+                chipview:show_image="false" />
 
             <active.since93.librery.chipview.ChipView
                 android:layout_width="wrap_content"
