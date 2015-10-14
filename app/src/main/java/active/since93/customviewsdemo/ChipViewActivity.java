@@ -37,8 +37,12 @@ public class ChipViewActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /**
+                 * Adding chipview programatically
+                 */
                 int colors[] = {Color.rgb(255,51,51), Color.rgb(204,204,0), Color.rgb(102,204,0), Color.rgb(0,128,255), Color.rgb(204,0,102)};
                 ChipView chipView = new ChipView(ChipViewActivity.this, edtTxtText.getText().toString(), colors[new Random().nextInt(colors.length)], checkBoxCancelable.isChecked());
+                // Set margin to chipview
                 chipView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
                 LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) chipView.getLayoutParams();
                 int padding = getResources().getDimensionPixelOffset(active.since93.librery.R.dimen.chip_view_padding);

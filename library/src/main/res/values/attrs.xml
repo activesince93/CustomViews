@@ -31,6 +31,7 @@
         <attr name="chip_text" format="string"/>
         <attr name="show_image" format="boolean"/>
         <attr name="background_color" format="color"/>
+        <attr name="typeface" />
     </declare-styleable>
 
 </resources>

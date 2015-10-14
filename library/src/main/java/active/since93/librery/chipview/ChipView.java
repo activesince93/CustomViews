@@ -2,6 +2,7 @@ package active.since93.librery.chipview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.StateListDrawable;
@@ -22,6 +23,7 @@ import active.since93.librery.R;
 public class ChipView extends LinearLayout {
     String chipText;
     boolean isCancelable;
+    String typeface;
     int chipColor;
 
     public ChipView(Context context, String chipText, int chipColor, boolean isCancelable) {
@@ -34,11 +36,13 @@ public class ChipView extends LinearLayout {
 
     public ChipView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        // passing xml attributes to method
         init(attrs);
     }
 
     public ChipView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        // passing xml attributes to method
         init(attrs);
     }
 
@@ -47,6 +51,7 @@ public class ChipView extends LinearLayout {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.ChipView);
             chipText = a.getString(R.styleable.ChipView_chip_text);
             isCancelable = a.getBoolean(R.styleable.ChipView_show_image, true);
+            typeface = a.getString(R.styleable.ChipView_typeface);
             chipColor = a.getColor(R.styleable.ChipView_background_color, getResources().getColor(android.R.color.holo_red_light));
             a.recycle();
         } else {
@@ -68,6 +73,10 @@ public class ChipView extends LinearLayout {
 
         TextView chipTextView = (TextView) getChildAt(0);
         chipTextView.setText(chipText);
+        if (typeface != null) {
+            Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + typeface);
+            chipTextView.setTypeface(myTypeface);
+        }
 
         ImageView btnCancel = (ImageView) getChildAt(1);
         if(isCancelable) {
@@ -85,6 +94,11 @@ public class ChipView extends LinearLayout {
         chipView.setBackgroundDrawable(drawable);
     }
 
+    /**
+     * Add rounded edges to chipview background
+     * @param color
+     * @return
+     */
     public Drawable getBackgroundDesign(int color) {
         GradientDrawable background = new GradientDrawable();
         background.setShape(GradientDrawable.RECTANGLE);
@@ -96,12 +110,15 @@ public class ChipView extends LinearLayout {
         return stateListDrawable;
     }
 
-    public String getChipViewText() {
-        return chipText;
-    }
-
+    /**
+     * Setting getter setter methods for adding chipview programatically
+     */
     public void setChipText(String chipText) {
         this.chipText = chipText;
+    }
+
+    public String getChipViewText() {
+        return chipText;
     }
 
     public boolean getCancelable() {

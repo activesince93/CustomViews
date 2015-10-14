@@ -57,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 chipview:background_color="@color/colorPrimary"
+                chipview:typeface="DK_Sensory_Overload.ttf"
                 chipview:chip_text="text" />
         </LinearLayout>
     </ScrollView>

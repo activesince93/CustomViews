@@ -19,17 +19,20 @@ public class CustomTextView extends TextView {
 
     public CustomTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        // passing xml attributes to method
         init(attrs);
     }
 
     public CustomTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        // passing xml attributes to method
         init(attrs);
     }
 
     private void init(AttributeSet attrs) {
         if(attrs != null) {
             TypedArray a = getContext().obtainStyledAttributes(attrs, R.styleable.CustomTextView);
+            // Setting custom typeface for edittext.
             String typeface = a.getString(R.styleable.CustomTextView_typeface);
             if (typeface != null) {
                 Typeface myTypeface = Typeface.createFromAsset(getContext().getAssets(), "fonts/" + typeface);

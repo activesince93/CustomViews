@@ -89,8 +89,8 @@ public class ScrollingTextView extends TextView {
     public void resumeScroll() {
         if (!mPaused)
             return;
-        // Do not know why it would not scroll sometimes
-        // if setHorizontallyScrolling is called in constructor.
+
+        // set the scroll type property
         setHorizontallyScrolling(true);
 
         // use LinearInterpolator for steady scrolling
