@@ -67,6 +67,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
+                    android:singleLine="true"
                     android:text="ALERT W/O BUTTON" />
 
                 <Button
@@ -89,6 +90,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RECTVIEW" />
+
+            <Button
+                android:id="@+id/btnAutoTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AUTOCOMPLETE TEXTVIEW" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

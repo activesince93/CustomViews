@@ -7,6 +7,7 @@
     <string name="title_edit_texts">EditTexts</string>
     <string name="title_chip_view">ChipViews</string>
     <string name="title_rect_view">RectView</string>
+    <string name="title_auto_text_view">AutoCompleteTextView</string>
     <string name="text">This is text in different font styles.</string>
     <string name="text_text">This is text in different font styles. This is text in different font styles.</string>
 

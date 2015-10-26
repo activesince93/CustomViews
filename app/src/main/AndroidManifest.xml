@@ -73,6 +73,15 @@
                 android:value=".MainActivity" />
         </activity>
 
+        <activity
+            android:name=".AutoCompleteTextViewActivity"
+            android:label="@string/title_auto_text_view"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />

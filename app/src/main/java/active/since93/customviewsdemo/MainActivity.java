@@ -11,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews,
+        Button btnTextViews, btnButtons, btnSnackBar, btnSnackBarWithButton, btnImageViews, btnAutoTextView,
                 btnEditTexts, btnAlertWithButton, btnAlertWOButton, btnChipView, btnRectView;
         setContentView(R.layout.activity_main);
         analyticsTrackers = new AnalyticsTrackers(this);
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnSnackBarWithButton = (Button) findViewById(R.id.snackbar_button);
         btnChipView = (Button) findViewById(R.id.btnChipView);
         btnRectView = (Button) findViewById(R.id.btnRectView);
+        btnAutoTextView = (Button) findViewById(R.id.btnAutoTextView);
         btnTextViews.setOnClickListener(this);
         btnButtons.setOnClickListener(this);
         btnSnackBar.setOnClickListener(this);
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnAlertWOButton.setOnClickListener(this);
         btnChipView.setOnClickListener(this);
         btnRectView.setOnClickListener(this);
+        btnAutoTextView.setOnClickListener(this);
     }
 
     @Override
@@ -120,6 +123,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnRectView:
                 intent = new Intent(MainActivity.this, RectViewActivity.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.left_in, R.anim.left_out);
+                break;
+            case R.id.btnAutoTextView:
+                intent = new Intent(MainActivity.this, AutoCompleteTextViewActivity.class);
                 startActivity(intent);
                 overridePendingTransition(R.anim.left_in, R.anim.left_out);
             default:
