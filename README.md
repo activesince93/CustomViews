@@ -89,7 +89,7 @@ I have also implemented Google Analytics.
 ```
 ![ChipView](https://github.com/activesince93/CustomViews/blob/master/screenshots/chipview.png)
 
-**Add the following line to your build.gradle dependencies**
+**Add the following line to your build.gradle dependencies:**
 ```sh
 compile project(':library')
 ```
