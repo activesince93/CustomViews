@@ -11,14 +11,13 @@ import android.widget.AutoCompleteTextView;
 public class AutoCompleteTextViewActivity extends AppCompatActivity {
 
     private AutoCompleteTextView autoCompleteTextView;
-    String countries[] = {"India", "China", "USA", "England", "Dubai", "Pakistan", "Iran", "Indiana"};
+    String countries[] = {"India", "China", "USA", "England", "Dubai", "Pakistan", "Iran", "Iceland"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_autocomplete_textview);
         autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.txtAutoCompleteTextView);
-
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countries);
         autoCompleteTextView.setAdapter(adapter);
     }

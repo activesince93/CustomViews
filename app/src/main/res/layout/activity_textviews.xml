@@ -50,7 +50,18 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/text_padding"
                 android:singleLine="true"
-                android:text="@string/text_text"
+                android:text="Random"
+                android:textSize="@dimen/text_size"
+                customtextview:scrollType="ifLengthExceeds"
+                customtextview:typeface="Almost_Japanese_Smooth.ttf" />
+
+            <active.since93.librery.textview.ScrollingTextView
+                android:id="@+id/scrollTextView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/text_padding"
+                android:singleLine="true"
+                android:text="SmallText"
                 android:textSize="@dimen/text_size"
                 customtextview:scrollType="ifLengthExceeds"
                 customtextview:typeface="Almost_Japanese_Smooth.ttf" />

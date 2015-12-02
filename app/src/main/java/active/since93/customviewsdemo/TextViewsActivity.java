@@ -17,6 +17,9 @@ public class TextViewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textviews);
+
+        scrollTextView = (ScrollingTextView) findViewById(R.id.scrollTextView2);
+        scrollTextView.setText(getString(R.string.text_text));
     }
 
     @Override

@@ -68,11 +68,7 @@ public class ScrollingTextView extends TextView {
             }
 
             if (scrollType != 0) {
-                WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
-                Display display = wm.getDefaultDisplay();
-                Point size = new Point();
-                display.getSize(size);
-                width = size.x;
+                width = getCalculatedWidth();
             }
         }
 
@@ -160,5 +156,27 @@ public class ScrollingTextView extends TextView {
 
     public boolean isPaused() {
         return mPaused;
+    }
+
+    public void setText(String str) {
+        super.setText(str);
+        if (calculateScrollingLen() > getCalculatedWidth()) {
+            mXPaused = -1 * getWidth();
+            // assume it's paused
+            mPaused = true;
+            resumeScroll();
+        } else {
+            setVisibility(VISIBLE);
+        }
+
+    }
+
+    public int getCalculatedWidth() {
+        WindowManager wm = (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
+        Display display = wm.getDefaultDisplay();
+        Point size = new Point();
+        display.getSize(size);
+        int width = size.x;
+        return width;
     }
 }
