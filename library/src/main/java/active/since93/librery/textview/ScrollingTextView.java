@@ -168,7 +168,6 @@ public class ScrollingTextView extends TextView {
         } else {
             setVisibility(VISIBLE);
         }
-
     }
 
     public int getCalculatedWidth() {

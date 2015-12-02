@@ -11,15 +11,18 @@ import active.since93.librery.textview.ScrollingTextView;
  */
 public class TextViewsActivity extends AppCompatActivity {
 
-    ScrollingTextView scrollTextView;
+    ScrollingTextView scrollTextView1;
+    ScrollingTextView scrollTextView2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_textviews);
 
-        scrollTextView = (ScrollingTextView) findViewById(R.id.scrollTextView2);
-        scrollTextView.setText(getString(R.string.text_text));
+        scrollTextView1 = (ScrollingTextView) findViewById(R.id.scrollTextView1);
+        scrollTextView2 = (ScrollingTextView) findViewById(R.id.scrollTextView2);
+        scrollTextView1.setText("Random");
+        scrollTextView2.setText(getString(R.string.text_text));
     }
 
     @Override
