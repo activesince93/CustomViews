@@ -21,15 +21,15 @@ I have also implemented Google Analytics.
 **Custom Scrolling TextView**
 ```sh
 <active.since93.librery.textview.ScrollingTextView
-                android:id="@+id/scrollTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_padding"
-                android:singleLine="true"
-                android:text="@string/text_text"
-                android:textSize="@dimen/text_size"
-                customtextview:scrollType="ifLengthExceeds"
-                customtextview:typeface="Almost_Japanese_Smooth.ttf" />
+        android:id="@+id/scrollTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_padding"
+        android:singleLine="true"
+        android:text="@string/text_text"
+        android:textSize="@dimen/text_size"
+        customtextview:scrollType="ifLengthExceeds"
+        customtextview:typeface="Almost_Japanese_Smooth.ttf" />
 ```
 ![TextView](https://github.com/activesince93/CustomViews/blob/master/screenshots/textview.gif)
 
